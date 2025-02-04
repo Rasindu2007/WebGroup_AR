@@ -1,0 +1,206 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", serif;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            height: 60px;
+            background-color: #333;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .circle-container {
+            font-style: bold;
+            position: absolute;
+            top: -70px;
+            left: -70px;
+            width: 250px;
+            height: 250px;
+            background-color: #ff0000;
+            color: #000;
+            border-color: #fff;
+            border: 2px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .circle-container .typing {
+            font-size: 20px;
+            font-weight: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            animation: typing infinite 3s steps(7, end), blink 0.5s step-end infinite alternate;
+        }
+
+        .circle-container .falling {
+            font-size: 14px;
+            opacity: 0;
+            animation: fall 3s infinite ease-in-out;
+            animation-delay: 1.5s;
+        }
+
+        /* Typing animation */
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100px;
+            }
+
+            100% {
+                width: 100px;
+            }
+        }
+
+        /* Blinking cursor */
+        @keyframes blink {
+            from {
+                border-right-color: white;
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        /* Falling animation */
+        @keyframes fall {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+        }
+
+        .links-container {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #296b8e;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #53AA43;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        li a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        li a:hover {
+            color: white;
+            background-color: #53AA43;
+        }
+
+        .login {
+            color: #296B8E;
+            background-color: #F0D78C;
+            padding: 6px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .login:hover {
+            color: #ffff;
+            background-color: #0D3B66;
+        }
+
+        /* nav responsive styling */
+        @media (max-width: 500px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .links-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .login {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Circle with animations -->
+    <div class="circle-container">
+        <div class="typing"><b>රථගාය</b></div><br>
+        <div class="falling">Vehicle Selling</div>
+    </div>
+
+    <nav>
+        <!-- Navigation links -->
+        <div class="links-container">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutus.html" target="_blank">About</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+            <a href="upload.php"><button class="login">Post an AD!</button></a>
+        </div>
+    </nav>
+</body>
+
+</html>
